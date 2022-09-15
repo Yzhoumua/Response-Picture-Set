@@ -1,0 +1,236 @@
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+li {
+    list-style: none;
+}
+
+/* 头部 */
+.imgHead {
+    height: 80px;
+    position: relative;
+    transition: all 0.3s;
+}
+.imgHead.active{
+  height: auto;
+}
+.imgHead .logo a {
+    font-size: 1.5rem;
+}
+
+.imgHead .headNav li a {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.imgHead .navnone {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transform: scale(0);
+    transition: all 0.2s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.imgHead .headNav {
+    transition: all 0.3s;
+}
+.headNavItem ul.active{
+    height:auto;
+}
+.imgHead .headNav ul{
+
+}
+.headNavItem ul{
+    background-color: white;
+    position: absolute;
+    height:auto ;
+    z-index: 2;
+    width: 200px;
+    top:20px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s;
+   
+}
+.headNavItem ul li{
+    padding: 5px 5px;
+    box-sizing: border-box;
+}
+.headNavItem:hover ul{
+    transform: scale(1);
+    opacity: 1;
+}
+.headNavItem ul li:hover a{
+    color: bisque!important;
+}
+
+/* 中间开头 */
+.centerHeadCont {
+    height: 500px;
+    background-image: url(../image/banner-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.centerHeadCont .centerHeadContCard {
+    width: 400px;
+    height: 160px;
+    background-color: rgba(240, 248, 255, 0.808);
+    text-align: center;
+}
+
+.centerHeadCont .centerHeadContCard p {
+    font-weight: 300;
+}
+/* 中间图片 */
+
+
+.centerImgCont .imgBox .imgBoxHover{
+    background-color: rgba(0, 0, 0, 0.527);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition:all 0.2s;
+    transform: scale(0);
+}
+.centerImgCont .imgBox:hover .imgBoxHover .imgBoxHoverCenter i:hover{
+    background-color: black;
+    color: white;
+}
+.centerImgCont .imgBox:hover .imgBoxHover .imgBoxHoverText{
+    opacity:1;
+    left: 20px;
+    bottom:10px;
+}
+.centerImgCont .imgBox .imgBoxHover .imgBoxHoverText{
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.centerImgCont .imgBox:hover .imgBoxHover{
+    opacity: 1;
+    transform: scale(1);
+}
+.centerImgCont .imgBox .imgBoxHover .imgBoxHoverCenter i {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.centerImgCont .imgBox .imgBoxHover .imgBoxHoverText {
+    bottom: 0;
+    left: 0;
+    color: white;
+}
+
+.centerImgCont ul li {
+    font-weight: bold;
+    transition: all 0.3s;
+    margin: 0 5px;
+    box-sizing: border-box;
+    border: 2px rgba(0, 0, 0, 0) solid;
+    cursor: pointer;
+}
+
+.centerImgCont ul li.active {
+    border: 2px black solid;
+}
+.centerImgCont ul li:hover{
+    border: 2px black solid;
+}
+/* 中间结尾卡片 */
+.centerFooterCard{
+    background-color: #f8f8f8;
+}
+.centerFooterCard h4 {
+    font-size: 2rem;
+}
+.centerFooterCard p {
+    font-weight: 300;
+}
+.centerFooterCard .card-title {
+    font-weight: bold;
+}
+.centerFooterCard .card-subtitle{
+    font-size: 0.8rem;
+}
+.centerFooterCard .cardBottom{
+    padding:0px 20px 20px 20px;
+}
+.centerFooterCard .cardBottom a{
+    font-weight: bold;
+}
+/* 结尾 */
+footer .container{
+    height: 80px;
+}
+footer h5{
+    font-size: 0.8rem;
+}
+@media all and (max-width:779px){
+    .imgHead .headNav{
+        display: block !important;
+        text-align: center !important;
+        bottom: 0;
+        width: 100%;
+        transition: all 0.2s;
+        z-index: -1;
+        opacity: 0;
+    }
+    .imgHead .headNav ul {
+        position: relative;
+        transition: all 0.2s;
+        height: 0;
+      
+    }
+    .imgHead .headNav ul{
+        position: relative;
+        margin: 0 auto;
+    }
+    .imgHead .headNav ul:hover{
+        height: 100%;
+        opacity: 1;
+        transform: scale(1);
+    }
+    .headNavItem:hover ul{
+        height: 100%;
+        opacity: 1;
+    }
+    .headNavItem ul.active{
+        height: 100%;
+        opacity: 1;
+    }
+    .imgHead .headNav.active{
+        z-index: 1!important;
+       opacity: 1;
+    }
+    .imgHead .headNav li {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .imgHead .logo {
+        padding-left: 1rem;
+    }
+
+    .imgHead .navnone {
+        transform: scale(1);
+        opacity: 1;
+        padding-right: 1rem;
+    }
+
+    @media all and (max-width:580px){
+        .centerImgCont .imgBox img{
+            width: auto;
+        }
+    }
+}
